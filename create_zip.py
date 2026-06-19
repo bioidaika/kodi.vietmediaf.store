@@ -16,10 +16,10 @@ def zip_dir(src_dir, zip_filename):
                 zipf.write(abs_path, arcname)
 
 # plugin
-plugin_src = r"c:\Users\ostno\AppData\Roaming\Kodi\addons\plugin.video.vietmediaF"
+plugin_src = r"e:\plugin.video.vietmediaF"
 plugin_zips = [
-    r"e:\Project\kodi.vietmediaf.store\plugin.video.vietmediaF-11.37.5.0.zip",
-    r"e:\Project\kodi.vietmediaf.store\plugin.video.vietmediaF\plugin.video.vietmediaF-11.37.5.0.zip"
+    r"e:\Project\kodi.vietmediaf.store\plugin.video.vietmediaF-11.37.5.3.zip",
+    r"e:\Project\kodi.vietmediaf.store\plugin.video.vietmediaF\plugin.video.vietmediaF-11.37.5.3.zip"
 ]
 for p in plugin_zips:
     zip_dir(plugin_src, p)
