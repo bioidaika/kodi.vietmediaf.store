@@ -4,7 +4,11 @@ import zipfile
 def zip_dir(src_dir, zip_filename):
     with zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:
         for root, _, files in os.walk(src_dir):
+            if '__pycache__' in root:
+                continue
             for file in files:
+                if file.endswith('.pyc') or file == '.DS_Store':
+                    continue
                 abs_path = os.path.join(root, file)
                 rel_path = os.path.relpath(abs_path, os.path.dirname(src_dir))
                 # Kodi requires forward slashes
